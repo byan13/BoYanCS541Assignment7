@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  A7!
+//  Endgame
 //
 //  Created by Bo Yan on 12/2/19.
 //  Copyright © 2019 Bo Yan. All rights reserved.
