@@ -39,7 +39,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         addPlayer()
-        
     }
     
     var lastUpdateTimeInterval = TimeInterval()
@@ -66,7 +65,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addPlayer() {
-        naruto = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 50, height: 50))
+        //naruto = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 50, height: 50))
+        naruto = SKSpriteNode(imageNamed: "naruto")
         naruto.position = CGPoint(x: 0, y: -self.size.height / 2 + naruto.size.height)
         naruto.name = "Naruto"
         naruto.physicsBody?.isDynamic = false
@@ -75,7 +75,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         naruto.physicsBody?.collisionBitMask = 0
         naruto.physicsBody?.contactTestBitMask = Collision.Block
         
-        doppelgänger = SKSpriteNode(color: UIColor.yellow, size: CGSize(width: 50, height: 50))
+        doppelgänger = SKSpriteNode(imageNamed: "naruto")
         doppelgänger.position = naruto.position
         doppelgänger.name = "Doppelgänger"
         doppelgänger.physicsBody?.isDynamic = false
@@ -91,7 +91,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addBlock(type: BlockType) -> SKSpriteNode {
-        let block = SKSpriteNode(color: UIColor.red, size: CGSize(width: 0, height: 30))
+        //let block = SKSpriteNode(color: UIColor.red, size: CGSize(width: 0, height: 30))
+        let block = SKSpriteNode(imageNamed: "fire")
         block.name = "Block"
         block.physicsBody?.isDynamic = true
         
